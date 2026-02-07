@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Behavioural Interview Simulator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN -->
+<div class="login-box" id="loginBox">
+  <h2>Login</h2>
+  <input type="text" id="username" placeholder="Enter your name">
+  <button onclick="login()">Start Interview</button>
+</div>
+
+<!-- APP -->
+<div class="container" id="app" style="display:none;">
+  <h1>Welcome, <span id="user"></span> 👋</h1>
+
+  <div class="progress-container">
+    <div class="progress-bar" id="progress"></div>
+  </div>
+
+  <div class="timer">⏱ Time Left: <span id="time">30</span> sec</div>
+
+  <div class="question-box" id="question"></div>
+
+  <textarea id="answer" placeholder="Type your answer..."></textarea>
+
+  <button onclick="submitAnswer()">Submit Answer</button>
+
+  <div class="score-box" id="result" style="display:none;">
+    <h3>Score: <span id="score"></span>/10</h3>
+    <div class="feedback" id="feedback"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
